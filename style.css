@@ -1,0 +1,125 @@
+body {
+  background-image: url('background.gif');
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.center {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1.3s steps(14, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(3, 3, 3); }
+}
+
+h1 {
+  font-family: monospace;
+  text-align: center;
+}
+
+p {
+  font-family: monospace;
+  line-height: 0px;
+}
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#audioTimer {
+  font-family: monospace;
+}
+
+#playPauseBtn {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#playPauseBtn:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+#loader {
+  display: none;
+  border: 16px solid #f3f3f3;
+ 
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+.box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box li a {
+  display: inline-block;
+  margin: 10px;
+  color: rgb(197, 71, 126);
+  font-size: 40px;
+  transition: all 250ms ease-in-out;
+}
+
+.box li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+

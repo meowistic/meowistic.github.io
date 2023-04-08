@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/0aa5e9f1c4.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <div class="audio-container">
+        <div class="typewriter">
+        <h1>Meowistic</h1>
+        </div>
+        <p>A random python nerd, valorant/cs:go sweat</p>
+        <audio id="myAudio" autoplay>
+          <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playPauseBtn" onclick="playPause()">Play</button>
+        <div id="loader"></div>
+        <div id="audioTimer">00:00</div>
+      </div>
+    </div>
+  </div>
+  
+   
+  </div>
+  <div class="center">
+  <div class="box">
+    <ul>
+      <li><a href="hhttps://discord.gg/JumKTgQz5F"><i class="fab fa-discord"></i></a></li>
+      <li><a href="https://github.com/meowistic"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.paypal.me/meowist"><i class="fab fa-paypal"></i></a></li>
+    </ul>
+  </div>
+</div>
+  
+
+
+
+  <script>
+    var myAudio = document.getElementById("myAudio");
+    var playPauseBtn = document.getElementById("playPauseBtn");
+    var loader = document.getElementById("loader");
+    var audioTimer = document.getElementById("audioTimer");
+
+    function playPause() {
+      if (myAudio.paused) {
+        myAudio.play();
+        playPauseBtn.innerHTML = "Pause";
+        loader.style.display = "block";
+        updateTimer();
+      } else {
+        myAudio.pause();
+        playPauseBtn.innerHTML = "Play";
+        loader.style.display = "none";
+      }
+    }
+
+    function updateTimer() {
+      var currentMinutes = Math.floor(myAudio.currentTime / 60);
+      var currentSeconds = Math.floor(myAudio.currentTime - currentMinutes * 60);
+      var durationMinutes = Math.floor(myAudio.duration / 60);
+      var durationSeconds = Math.floor(myAudio.duration - durationMinutes * 60);
+      if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+      if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+      if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+      if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+      audioTimer.innerHTML = currentMinutes + ":" + currentSeconds + " / " + durationMinutes + ":" + durationSeconds;
+      setTimeout(updateTimer, 500);
+      loader.style.display = "none";
+    }
+  </script>
+</body>
+</html>
