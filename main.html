@@ -3,17 +3,16 @@
 <head>
   <script src="https://kit.fontawesome.com/0aa5e9f1c4.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
 <body>
   <div class="container">
     <div class="center">
       <div class="audio-container">
         <div class="typewriter">
-        <h1>Meowistic</h1>
+          <h1>Meowistic</h1>
         </div>
         <p>A random python nerd, valorant/cs:go sweat</p>
-        <audio id="myAudio" autoplay>
+        <audio id="myAudio" autoplay onloadedmetadata="playPause()">
           <source src="audio.mp3" type="audio/mpeg">
         </audio>
         <button id="playPauseBtn" onclick="playPause()">Play</button>
@@ -23,20 +22,15 @@
     </div>
   </div>
   
-   
-  </div>
   <div class="center">
-  <div class="box">
-    <ul>
-      <li><a href="hhttps://discord.gg/JumKTgQz5F"><i class="fab fa-discord"></i></a></li>
-      <li><a href="https://github.com/meowistic"><i class="fab fa-github"></i></a></li>
-      <li><a href="https://www.paypal.me/meowist"><i class="fab fa-paypal"></i></a></li>
-    </ul>
+    <div class="box">
+      <ul>
+        <li><a href="https://discord.gg/JumKTgQz5F"><i class="fab fa-discord"></i></a></li>
+        <li><a href="https://github.com/meowistic"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.paypal.me/meowist"><i class="fab fa-paypal"></i></a></li>
+      </ul>
+    </div>
   </div>
-</div>
-  
-
-
 
   <script>
     var myAudio = document.getElementById("myAudio");
